@@ -15,6 +15,6 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: github actions
-          to: 许教伟
+          to: a269205015@foxmail.com
           from: ${{ secrets.MAIL_USERNAME }}
           content_type: text/plain
