@@ -1,0 +1,22 @@
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'checkout'
+        uses: actions/checkout@v2
+
+      - name: 'sendmail'
+          uses: dawidd6/action-send-mail@master
+          with:
+            server_address: smtp.163.com
+            server_port: 465
+            username: ${{ secrets.MAIL_USERNAME }}
+            password: ${{ secrets.MAIL_PASSWORD }}
+            subject: github actions
+            to: a269205015@foxmail.com
+            from: ${{ secrets.MAIL_USERNAME }}
+            body: file://README.md
+            content_type: text/plain
