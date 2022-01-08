@@ -17,5 +17,4 @@ jobs:
           subject: github actions
           to: a269205015@foxmail.com
           from: ${{ secrets.MAIL_USERNAME }}
-          body: file://README.md
           content_type: text/plain
